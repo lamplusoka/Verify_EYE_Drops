@@ -14,7 +14,7 @@ name_file_json  = 'output.json'
 path_file_json  = "./" + name_file_json
 
 print("content-Type: text/html\n\n")
-print('<h1>Eye Drops</h1>')
+print('<h1>めぐすり、さした？</h1>')
 
 today   = {'day': str(datetime.date.today())}
 #print('日本語')
@@ -24,11 +24,11 @@ change_date_last_to_dict = ast.literal_eval(read_date_last)
 #print(change_date_last_to_dict['day'])
 
 if today == change_date_last_to_dict :
-    message_done = 'Already done, ' + today['day'] + '.'
+    message_done = '今日は既に目薬さしたよ。まつ毛のびちゃう。日付:' + today['day'] 
     print('<p>' + message_done + '</p>')
     mailTo.send_mail_to(form['password'].value, form['toAddress'].value, message_done)
 else:
-    message_good = 'Good work! Good remain! ' + today['day'] + '.'
+    message_good = 'よく思い出しました！あっぱれ！日付:' + today['day']
     print('<p>' + message_good + '</p>')
     mailTo.send_mail_to(form['password'].value, form['toAddress'].value, message_good)
 
