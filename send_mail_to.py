@@ -3,8 +3,8 @@
 import smtplib
 from email.mime.text import MIMEText
 
-from_address = 'eye.drops.everyday@gmail.com'
-#to_address   = 'eye.drops.everyday@gmail.com'
+from_address = 'enter_from_gmailAdress'
+
 
 def send_mail_to(pass_from_URL, to_address, message):
     password      = str(pass_from_URL)
